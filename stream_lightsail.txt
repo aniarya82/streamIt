@@ -1,0 +1,76 @@
+git clone 13.235.136.218
+git clone https://github.com/gulshan73/streamIt.git
+sudo apt upgrade
+sudo reboot
+cd streamIt/
+ll
+sudo apt install nodejs
+sudo apt update
+sudo apt upgrade
+cd streamIt/ 
+pwd
+sudo nana /lib/systemd/system/streamit.service
+sudo nano /lib/systemd/system/streamit.service
+sudo systemctl deamon-reload
+sudo systemctl daemon-reload
+sudo service streamit start
+sudo service streamit status
+which node
+sudo nano /lib/systemd/system/streamit.service
+sudo service streamit status
+sude netstat -plunt
+sudo netstat -plunt
+sudo ufw list app
+sudo ufw app list
+sudo ufw status
+sudo ufw allow 'Nginx HTTP
+sudo ufw allow 'OpenSSH'
+sudo ufw start
+sudo ufw enable
+sudo ufw status
+sudo netstat -plunt
+node server.js 
+nano /etc/nginx/sites-available/stream.hiten.io
+sudo nano /etc/nginx/sites-available/stream.hiten.io
+sudo ln -s /etc/nginx/sites-available/stream.hiten.io /etc/nginx/sites-enabled/stream.hiten.io
+sudo nginx -s reload
+sudo service nginx status
+node server.js 
+sudo telnet -plunt
+sudo netstat -plunt
+sudo service nginx status
+sudo service streamit status
+nano /lib/systemd/system/streamit.service 
+sudo nano /lib/systemd/system/streamit.service 
+sudo systemctl daemon-reload
+sudo service streamit stop
+sudo service streamit start
+sudo service streamit status
+sudo netstat -plunt
+sudo service streamit stop
+npm install pm2 -g
+sudo npm install pm2 -g
+cd streamIt/
+pm2 start server.js 
+sudo netstat -plunt
+pm2 monitor
+pm2 monit
+sudo dpkg --configure -a
+clear
+apt-cache search nodejs
+cd streamIt/
+ll
+node server.js 
+sudo apt install nodejs
+node server.js 
+npm install fs
+sudo apt install npm
+npm install fs
+npm install path
+node server.js 
+npm install socket.io
+node server.js 
+sudo apt install nginx
+ls -a ~/.
+nano ~/.bash_history 
+cat ~/.bash_history | pbcopy

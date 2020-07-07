@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <title>Stream Twitch</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Here is a stream test, via Twitch API.</h2>
+      <button class="btn btn-primary" id="start" onclick="onClick()">
+        Click Me
+      </button>
+
+      <!-- Add a placeholder for the Twitch embed -->
+      <div class="embed-responsive embed-responsive-16by9">
+        <div id="twitch-embed"></div>
+      </div>
+      <button class="btn btn-danger d-none" id="end" onclick="stopBroadcast()">
+        End broadcast
+      </button>
+    </div>
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <!--
+      Create a Twitch.Embed object that will render
+      within the "twitch-embed" root element.
+    -->
+    <script type="text/javascript">
+      function onClick() {
+        console.log("BUtton clikc triggered");
+        $("#start").addClass("d-none");
+        $("#end").removeClass("d-none");
+        var embed = new Twitch.Embed("twitch-embed", {
+          width: 1280,
+          height: 720,
+          channel: "aniarya82",
+          layout: "video-with-chat",
+          autoplay: false,
+          // only needed if your site is also embedded on embed.example.com and othersite.example.com
+          // parent: ["embed.example.com", "othersite.example.com"],
+        });
+        embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+          console.log("Video broadcast is ready to play");
+          var player = embed.getPlayer();
+          player.play();
+          player.setVolume(0.3);
+        });
+      }
+      function stopBroadcast() {
+        console.log("Stopping the broadcast");
+        $("#twitch-embed").addClass("d-none");
+        $("#start").removeClass("d-none");
+        $("#end").addClass("d-none");
+      }
+    </script>
+  </body>
+</html>
